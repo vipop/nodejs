@@ -1,0 +1,24 @@
+block head
+	include ../templates/head.pug
+	+head("products", "Products")
+
+block navigation
+	include ../templates/navigation.pug
+	+navigation("products", "products")
+
+block banner
+	include ../templates/banner.pug
+	+banner("products")
+
+block content
+	div#content
+		include products-data.pug
+		- products = [p1, p2, p3, p4, p5, p6];
+		- for (i = 0; i < products.length; i++) {
+			include ../templates/article.pug
+			+article("products", products[i].title, products[i].img, products[i].text)
+		- }
+
+block footer
+	include ../templates/footer.pug
+	+footer

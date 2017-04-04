@@ -4,8 +4,15 @@ mixin navigation(page)
 		- if (page == "home") {
 			a.link.active(href="home.html") Home
 			a.link(href="about/about.html") About
+			a.link(href="products/products.html") Products
 		- }
-		- else {
+		- else if (page == "about"){
 			a.link(href="../home.html") Home
 			a.link.active(href="about.html") About
+			a.link(href="../products/products.html") Products
+		- }
+		- else if (page == "products"){
+			a.link(href="../home.html") Home
+			a.link(href="../about/about.html") About
+			a.link.active(href="products.html") Products
 		- }

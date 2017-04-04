@@ -14,10 +14,11 @@ var exts = {
 http.createServer(function(request, response) {
 	var fileName = path.basename(request.url) || 'home.html';
 	var ext = path.extname(fileName);
-	var dir = getDirectory(ext);
+	var dir = getDirectory(ext, fileName);
 
 	if (ext == '.html') {
-		var data = pug.renderFile(dir + fileName);
+		var period = fileName.indexOf('.');
+		var data = pug.renderFile(dir + fileName.substr(0, period) + ".pug");
 		response.writeHead(200,{"Content-type" : exts[ext]});
 		response.end(data);
 	}
@@ -32,7 +33,7 @@ http.createServer(function(request, response) {
 
 }).listen(8080);
 
-function getDirectory(ext) {
+function getDirectory(ext, fileName) {
 	var dir;
 	switch (ext) {
 		case '.jpg':
@@ -52,8 +53,8 @@ function getDirectory(ext) {
 				case 'about.html':
 					dir = __dirname + '/about/';
 					break;
-				case 'bio.html':
-					dir = __dirname + '/bio/';
+				case 'products.html':
+					dir = __dirname + '/products/';
 					break;
 				default:
 					dir = __dirname + '/';

@@ -6,7 +6,7 @@ mixin article(page, title, imgPath, text)
 			p
 				| #{text}
 	- }
-	- else {
+	- else if (page == "about") {
 		section.article-about
 			h2 #{title}
 			p
@@ -15,4 +15,11 @@ mixin article(page, title, imgPath, text)
 				| #{text.p2}
 			p
 				| #{text.p3} 
+	- }
+	- else if (page == "products") {
+		section.article
+			h2 #{title}
+			img.article-img(src=imgPath)
+			p
+				| #{text}
 	- }

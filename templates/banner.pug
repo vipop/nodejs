@@ -2,6 +2,9 @@ mixin banner(page)
 	- if (page == "home") {
 		div#banner
 	- }
-	- else {
+	- else if (page == "about"){
 		div#picture
+	- }
+	- else if (page == "products"){
+		div#promo
 	- }

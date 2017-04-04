@@ -4,8 +4,8 @@ mixin head(page, title)
 	link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico")
 	//- CSS Stylesheet
 	- if (page == "home") {
-		link(rel="stylesheet" type="text/css" href="styles.css")
+		link(rel="stylesheet" type="text/css" href="css/styles.css")
 	- }
-	- else if (page == "about") {
-		link(rel="stylesheet" type="text/css" href="../styles.css")
+	- else {
+		link(rel="stylesheet" type="text/css" href="../css/styles.css")
 	- }

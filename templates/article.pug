@@ -1,0 +1,18 @@
+mixin article(page, title, imgPath, text)
+	- if (page == "home") {
+		section.article
+			h2 #{title}
+			img.article-img(src=imgPath)
+			p
+				| #{text}
+	- }
+	- else {
+		section.article-about
+			h2 #{title}
+			p
+				| #{text.p1}
+			p
+				| #{text.p2}
+			p
+				| #{text.p3} 
+	- }

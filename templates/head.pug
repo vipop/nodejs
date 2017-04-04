@@ -1,0 +1,11 @@
+mixin head(page, title)
+	title #{title}
+	//- Google Font
+	link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico")
+	//- CSS Stylesheet
+	- if (page == "home") {
+		link(rel="stylesheet" type="text/css" href="styles.css")
+	- }
+	- else if (page == "about") {
+		link(rel="stylesheet" type="text/css" href="../styles.css")
+	- }

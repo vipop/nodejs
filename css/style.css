@@ -1,0 +1,104 @@
+body {
+	background-color: #111;
+	color: whitesmoke;
+	margin: auto;
+	width: 70%;
+}
+
+#banner {
+	background-image: url('images/banner.jpg');
+	background-size: 50%;
+	width: 100%;
+	height: 300px;
+}
+
+#navigation {
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+
+#logo {
+	font-family: 'Pacifico', cursive;
+	font-size: 21pt;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.link {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.link.active {
+	color: salmon;
+}
+
+.link.active:hover {
+	color: whitesmoke;
+}
+
+a {
+	color: whitesmoke;
+	text-decoration: none;
+	line-height: 18pt;
+}
+
+a:hover {
+	color: salmon;
+	text-decoration: none;
+}
+
+#picture {
+	background-image: url('images/profile.jpg');
+	background-repeat: no-repeat;
+	margin: auto;
+	width: 300px;
+	height: 300px;
+}
+
+#content {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+h2 {
+	font-family: 'Pacifico', cursive;
+}
+
+.article {
+	padding: 2%;
+	width: 28%;
+}
+
+.article-img {
+	background-color: whitesmoke;
+	width: 100%;
+}
+
+.article-about {
+	padding: 2%;
+	width: 46%;
+}
+
+p {
+	line-height: 18pt;
+}
+
+#footer {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px;
+}
+
+#contact {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 20px;
+}
+
+#copyright {
+	width: 100%;
+	margin-top: 20px;
+	text-align: center;
+}

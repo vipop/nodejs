@@ -1,0 +1,27 @@
+block head
+	include templates/head.pug
+	+head("home", "Home")
+
+block navigation
+	include templates/navigation.pug
+	+navigation("home", "home")
+
+block banner
+	include templates/banner.pug
+	+banner("home")
+
+block content
+	div#content
+		- for (i = 0; i < 3; i++) {
+			include article-data1.pug
+			include article-data2.pug
+			include article-data3.pug
+			
+			- articles = [a1, a2, a3];
+			include templates/article.pug
+			+article("home", articles[i].title, articles[i].img, articles[i].text)
+		- }
+
+block footer
+	include templates/footer.pug
+	+footer

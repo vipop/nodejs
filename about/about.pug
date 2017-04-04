@@ -1,0 +1,25 @@
+block head
+	include ../templates/head.pug
+	+head("about", "About")
+
+block navigation
+	include ../templates/navigation.pug
+	+navigation("about", "about")
+
+block banner
+	include ../templates/banner.pug
+	+banner("about")
+
+block content
+	div#content
+		include article-about.pug
+		include article-interests.pug
+		- articles = [a1, a2];
+		- for (i = 0; i < articles.length; i++) {
+			include ../templates/article.pug
+			+article("about", articles[i].title, "", articles[i].text)
+		- }
+
+block footer
+	include ../templates/footer.pug
+	+footer

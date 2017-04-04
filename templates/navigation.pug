@@ -1,0 +1,11 @@
+mixin navigation(page)
+	nav#navigation
+		a#logo(href="home.html") iot.
+		- if (page == "home") {
+			a.link.active(href="home.html") Home
+			a.link(href="about/about.html") About
+		- }
+		- else {
+			a.link(href="../home.html") Home
+			a.link.active(href="about.html") About
+		- }
